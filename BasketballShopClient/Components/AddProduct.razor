@@ -1,0 +1,165 @@
+﻿@page "/add-product"
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <EditForm Model="MyProduct" OnValidSubmit="HandleSaveProduct">
+                <DataAnnotationsValidator />
+                <ValidationSummary />
+                <div class="card">
+                    <div class="card-header">Add Product</div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="form-label"> Name</label>
+                            <InputText @bind-Value="MyProduct.Name" class="form-control"></InputText>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label"> Brand</label>
+                            <InputText @bind-Value="MyProduct.Brand" class="form-control"></InputText>
+                        </div>
+                        <div class="form-group mt3">
+                            <label class="form-label"> Price</label>
+                            <InputNumber @bind-Value="MyProduct.Price" class="form-control"></InputNumber>
+                        </div>
+                        <div class="form-group mt3">
+                            <label class="form-label"> Quantity</label>
+                            <InputNumber @bind-Value="MyProduct.StockQuantity" class="form-control"></InputNumber>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label"> Description</label>
+                            <InputTextArea @bind-Value="MyProduct.Description" class="form-control"></InputTextArea>
+                        </div>
+                        <div class="form-group mt3">
+                            <label class="form-label"> Product Type</label>
+                            <InputSelect @bind-Value="MyProduct.ProductType" class="form-control">
+                                @foreach (var productType in Enum.GetValues(typeof(ProductType)))
+                                {
+                                    <option value="@productType">@productType</option>
+                                }
+                            </InputSelect>
+                        </div>
+                        <div class="form-group mt3">
+                            <label class="form-label"> Size</label>
+                            <InputText @bind-Value="MyProduct.Size" class="form-control"></InputText>
+                        </div>
+                        <div class="form-group mt3">
+                            <label class="form-label"> Shoe Size</label>
+                            <InputNumber @bind-Value="MyProduct.ShoeSize" class="form-control"></InputNumber>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label"> Team</label>
+                            <InputText @bind-Value="MyProduct.Team" class="form-control"></InputText>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label"> Player</label>
+                            <InputText @bind-Value="MyProduct.Player" class="form-control"></InputText>
+                        </div>
+                        <div class="form-group mt3">
+                            <label class="form-label @(string.IsNullOrEmpty(ImageUploadMessage) ? "" : "text-danger")">
+                                @(string.IsNullOrEmpty(ImageUploadMessage) ? "Upload Image" : ImageUploadMessage)
+                            </label>
+                            <InputFile class="form-control" OnChange="UploadImage"></InputFile>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="form-group mt3">
+                            @if (ShowSaveButton)
+                            {  
+                                <button type="submit" class="btn btn-outline-primary"><i class="fa fa-plus"></i> Save Product</button>
+                            }
+                            <BusyButtonComponent ShowBusyButton="ShowBusyButton"></BusyButtonComponent>
+                        </div>
+                    </div>
+                </div>
+            </EditForm>
+        </div>
+    </div>
+</div>
+
+@if (ShowDialog)
+{
+    <div class="modal fade show d-block" style="background-color: rgba(0, 0, 0, 0.5);">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Notification!</h5>
+                    <button type="button" class="btn-close" aria-label="Close" @onclick="CloseDialog"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-@AlertType">@Message</div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-@AlertType" @onclick="CloseDialog">Okay</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+@code {
+    Product MyProduct = new();
+    string ImageUploadMessage = "";
+    bool ShowDialog = false;
+    string AlertType = "";
+    string Message = "";
+
+    async Task HandleSaveProduct()
+    {
+        ShowSaveButton = false;
+        ShowBusyButton = !ShowSaveButton;
+
+        if (string.IsNullOrEmpty(MyProduct.ImageUrl))
+        {
+            SetDialogValues("warning", "You need to choose an image!");
+            return;
+        }
+
+        var (flag, message) = await ClientService.AddProduct(MyProduct);
+
+        if (flag)
+        {
+            SetDialogValues("success", message);
+        }
+        else
+        {
+            SetDialogValues("danger", message);
+        }
+    }
+
+    async Task UploadImage(InputFileChangeEventArgs e)
+    {
+        if (e.File.Name.ToLower().Contains(".png"))
+        {
+            var format = "image/png";
+            var resizeImage = await e.File.RequestImageFileAsync(format, 300, 300);
+            var buffer = new byte[resizeImage.Size];
+            await resizeImage.OpenReadStream().ReadAsync(buffer);
+            var imageData = $"data:{format};base64,{Convert.ToBase64String(buffer)}";
+            ImageUploadMessage = "";
+            MyProduct.ImageUrl = imageData;
+            imageData = "";
+        }
+        else
+        {
+            ImageUploadMessage = "PNG file needed.";
+        }
+    }
+
+    void SetDialogValues(string alertType, string message)
+    {
+        AlertType = alertType;
+        Message = message;
+        ShowDialog = true;
+    }
+
+    void CloseDialog()
+    {
+        ShowDialog = false;
+        ShowBusyButton = false;
+        ShowSaveButton = !ShowBusyButton;
+    }
+
+    public bool ShowBusyButton { get; set; }
+    public bool ShowSaveButton { get; set; } = true;
+}

@@ -1,0 +1,30 @@
+﻿@using System.Net.Http
+@using System.Net.Http.Json
+@using BasketballShopClient.Services
+@using BasketballShopSharedLibrary.Contracts
+@using Blazored.LocalStorage
+@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Routing
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Web.Virtualization
+@using Microsoft.AspNetCore.Components.WebAssembly.Http
+@using Microsoft.JSInterop
+@using BasketballShopClient
+@using BasketballShopClient.Layout
+@using BasketballShopSharedLibrary.Models
+@using BasketballShopSharedLibrary.DTOs
+@using BasketballShopClient.Authentication
+@using BasketballShopClient.Components
+
+@inject IJSRuntime js
+@inject IProduct ClientService
+@inject IUserAccountService AccountService
+@inject AuthenticationStateProvider AuthStateProvider
+@inject NavigationManager Navigation
+@inject ILocalStorageService LocalStorageService
+@inject HttpClient Http
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject IFavoritesService FavoritesService
+@inject ICartService CartService
+

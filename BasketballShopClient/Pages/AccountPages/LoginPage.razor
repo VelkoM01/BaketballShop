@@ -1,0 +1,55 @@
+﻿@page "/identity/account/login"
+@using BasketballShopClient.Authentication
+
+<h3>Login</h3>
+
+<EditForm Model="@User" OnValidSubmit="@HandleLogin">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="card">
+        <div class="card-header">
+            Fill this form to Login
+        </div>
+        <div class="card-body">
+            <div class="form-group mt-3">
+                <label class="form-label" for="email">Email</label>
+                <InputText id="email" class="form-control" @bind-Value="User.Email" />
+                <ValidationMessage For="@(() => User.Email)" />
+            </div>
+            <div class="form-group mt-3">
+                <label class="form-label" for="password">Password</label>
+                <InputText id="password" type="password" class="form-control" @bind-Value="User.Password" />
+                <ValidationMessage For="@(() => User.Password)" />
+            </div>
+            <div class="form-group mt-3">
+                <button class="btn btn-outline-primary float-end" type="submit">Login</button>
+            </div>
+        </div>
+    </div>
+</EditForm>
+
+@code {
+    private LoginDTO User = new();
+
+    private async Task HandleLogin()
+    {
+        var result = await AccountService.Login(User);
+
+        if (result.Flag) 
+        {
+            var customAuthStateProvider = (CustomAuthenticationStateProvider)AuthStateProvider;
+            await customAuthStateProvider.UpdateAuthenticationState(new TokenProp()
+                {
+                    Token = result.Token,
+                    RefreshToken = result.RefreshToken
+                });
+            Navigation.NavigateTo("/", forceLoad: true);
+        }
+        else
+        {
+
+            Console.WriteLine("Login failed: " + result.Message);
+        }
+    }
+}

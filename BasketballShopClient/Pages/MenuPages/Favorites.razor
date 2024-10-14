@@ -1,0 +1,53 @@
+﻿@page "/favorites"
+
+<PageTitle>Favorites</PageTitle>
+
+<div class="container">
+    <h2>Favorites</h2>
+
+    @if (favorites == null || !favorites.Any())
+    {
+        <p>No favorite products yet.</p>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var product in favorites)
+            {
+                <div class="col-md-3">
+                    <div class="card mb-4" @onclick="() => NavigateToProductDetails(product.Id)">
+                        <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name" />
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text">@product.Description</p>
+                            <p class="card-text"><strong>@product.Price.ToString("C")</strong></p>
+                            <button class="btn btn-danger" @onclick="@(() => RemoveFromFavorites(product.Id))">
+                                <i class="bi bi-trash"></i> Remove
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>
+
+@code {
+    private List<Product> favorites;
+
+    protected override async Task OnInitializedAsync()
+    {
+        favorites = await FavoritesService.GetFavorites();
+    }
+
+    private async Task RemoveFromFavorites(int productId)
+    {
+        await FavoritesService.RemoveFromFavorites(productId);
+        favorites = await FavoritesService.GetFavorites();
+    }
+
+    private void NavigateToProductDetails(int productId)
+    {
+        Navigation.NavigateTo($"/product/{productId}");
+    }
+}

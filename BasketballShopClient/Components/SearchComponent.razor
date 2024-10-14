@@ -1,0 +1,26 @@
+﻿<form class="d-flex mb-4" @onsubmit="OnSearchSubmit">
+    <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" @bind="searchItem">
+    <button class="btn btn-outline-dark search-btn" type="button" @onclick="OnSearchClicked">
+        <i class="bi bi-search"></i>
+    </button>
+</form>
+@code {
+    [Parameter]
+    public List<Product> Items { get; set; }
+    [Parameter]
+    public EventCallback<string> OnSearch { get; set; }
+    [Parameter]
+    public EventCallback OnSearchSubmited { get; set; }
+
+    private string searchItem;
+
+    private async Task OnSearchClicked()
+    {
+        await OnSearch.InvokeAsync(searchItem);
+    }
+
+    private async Task OnSearchSubmit()
+    {
+        await OnSearchSubmited.InvokeAsync(searchItem);
+    }
+}

@@ -1,0 +1,11 @@
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\bin\Debug\net8.0\BasketballShopSharedLibrary.deps.json
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\bin\Debug\net8.0\BasketballShopSharedLibrary.dll
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\bin\Debug\net8.0\BasketballShopSharedLibrary.pdb
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\obj\Debug\net8.0\BasketballShopSharedLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\obj\Debug\net8.0\BasketballShopSharedLibrary.AssemblyInfoInputs.cache
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\obj\Debug\net8.0\BasketballShopSharedLibrary.AssemblyInfo.cs
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\obj\Debug\net8.0\BasketballShopSharedLibrary.csproj.CoreCompileInputs.cache
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\obj\Debug\net8.0\BasketballShopSharedLibrary.dll
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\obj\Debug\net8.0\refint\BasketballShopSharedLibrary.dll
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\obj\Debug\net8.0\BasketballShopSharedLibrary.pdb
+C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopSharedLibrary\obj\Debug\net8.0\ref\BasketballShopSharedLibrary.dll

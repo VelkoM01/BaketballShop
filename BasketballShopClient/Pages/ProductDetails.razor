@@ -1,0 +1,104 @@
+﻿@page "/product/{id:int}"
+
+<PageTitle>Product Details</PageTitle>
+
+<div class="container">
+    @if (product == null)
+    {
+        <p><em>Loading...</em></p>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-6">
+                <img src="@product.ImageUrl" class="img-fluid" alt="@product.Name" />
+            </div>
+            <div class="col-md-6">
+                <h2>@product.Name</h2>
+                <p><strong>Brand:</strong> @product.Brand</p>
+                <p><strong>Price:</strong> @product.Price.ToString("C")</p>
+                <p>@product.Description</p>
+
+                @if (!string.IsNullOrEmpty(product.Team))
+                {
+                    <p><strong>Team:</strong> @product.Team</p>
+                }
+                @if (!string.IsNullOrEmpty(product.Player))
+                {
+                    <p><strong>Player:</strong> @product.Player</p>
+                }
+                @if (product.ProductType == ProductType.Shoe && product.ShoeSize.HasValue)
+                {
+                    <p><strong>Shoe Size:</strong> @product.ShoeSize</p>
+                }
+                else if ((product.ProductType == ProductType.Jersey || product.ProductType == ProductType.Accessory) && !string.IsNullOrEmpty(product.Size))
+                {
+                    <p><strong>Size:</strong> @product.Size</p>
+                }
+                @if (product.StockQuantity == 0)
+                {
+                    <p><strong>Out of stock!</strong></p>
+                }
+
+                <label for="quantity">Quantity:</label>
+                <InputNumber @bind-Value="quantity" min="1" max="@product.StockQuantity" class="form-control"
+                             disabled="@(product.StockQuantity == 0)" />
+
+
+                <button class="btn btn-primary mt-2" @onclick="ToggleCart" disabled="@(product.StockQuantity == 0)">
+                    @(CartService.IsInCart(product) ? "Remove from Cart" : "Add to Cart")
+                </button>
+                <button class="btn btn-secondary mt-2" @onclick="ToggleFavorite">
+                    @(isFavorite ? "Remove from Favorites" : "Add to Favorites")
+                </button>
+            </div>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public int Id { get; set; }
+
+    private Product? product;
+    private bool isFavorite;
+    private int quantity = 1;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            product = await ClientService.GetProductById(Id);
+            isFavorite = await FavoritesService.IsProductInFavorites(Id);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error fetching product details: {ex.Message}");
+        }
+    }
+
+    private void ToggleCart()
+    {
+        if (CartService.IsInCart(product))
+        {
+            CartService.RemoveFromCart(product);
+        }
+        else
+        {
+            CartService.AddToCart(product, quantity, product.Size, product.ShoeSize);
+        }
+    }
+
+    private async Task ToggleFavorite()
+    {
+        if (isFavorite)
+        {
+            await FavoritesService.RemoveFromFavorites(Id);
+        }
+        else
+        {
+            await FavoritesService.AddToFavorites(product);
+        }
+        isFavorite = !isFavorite;
+    }
+}

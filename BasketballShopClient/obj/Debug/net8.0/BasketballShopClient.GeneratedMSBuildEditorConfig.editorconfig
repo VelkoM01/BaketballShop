@@ -1,0 +1,119 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = BasketballShopClient
+build_property.RootNamespace = BasketballShopClient
+build_property.ProjectDir = C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\veljk\source\repos\BasketballShopServer\BasketballShopClient
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Components/AddProduct.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBZGRQcm9kdWN0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Components/BusyButtonComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCdXN5QnV0dG9uQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Components/MessageDialog.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNZXNzYWdlRGlhbG9nLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Components/OrderSuccessfulPage.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xPcmRlclN1Y2Nlc3NmdWxQYWdlLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Components/SearchComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTZWFyY2hDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Components/Square.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xTcXVhcmUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Layout/LoadingSpinner.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XExvYWRpbmdTcGlubmVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Layout/NavBarMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdkJhck1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/AccountPages/LoginPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFBhZ2VzXExvZ2luUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/AccountPages/RegisterPage.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFBhZ2VzXFJlZ2lzdGVyUGFnZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/BasketballSmackGame.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmFza2V0YmFsbFNtYWNrR2FtZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/Footer/About.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vdGVyXEFib3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/Footer/ContactSupport.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRm9vdGVyXENvbnRhY3RTdXBwb3J0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/MenuPages/Accessories.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudVBhZ2VzXEFjY2Vzc29yaWVzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/MenuPages/Cart.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudVBhZ2VzXENhcnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/MenuPages/Favorites.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudVBhZ2VzXEZhdm9yaXRlcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/MenuPages/HomeComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudVBhZ2VzXEhvbWVDb21wb25lbnQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/MenuPages/Jerseys.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudVBhZ2VzXEplcnNleXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/MenuPages/Shoes.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudVBhZ2VzXFNob2VzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/MenuPages/Tournaments.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTWVudVBhZ2VzXFRvdXJuYW1lbnRzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Pages/ProductDetails.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdERldGFpbHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/veljk/source/repos/BasketballShopServer/BasketballShopClient/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-or2nkvw8ss

@@ -1,0 +1,152 @@
+﻿@page "/"
+
+<PageTitle>Home</PageTitle>
+
+<SearchComponent Items="products" OnSearch="UpdateFilteredProducts" OnSearchSubmited="HandleSearchSubmit"></SearchComponent>
+
+<div class="container featured-products">
+    <h3>Featured Products</h3>
+
+    @if (featuredProducts == null || !featuredProducts.Any())
+    {
+        <p><em>Loading featured products...</em></p>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var product in featuredProducts.Skip(featuredProductIndex).Take(4))
+            {
+                <div class="col-md-3">
+                    <div class="card mb-4 featured-product" @onclick="() => NavigateToProductDetails(product.Id)">
+                        <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name" />
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text">@product.Description</p>
+                            <p class="card-text"><strong>@product.Price.ToString("C")</strong></p>
+                            <button class="btn btn-primary btn-block" @onclick="() => NavigateToProductDetails(product.Id)">Buy Now</button>
+                        </div>
+                    </div>
+                </div> 
+            }
+        </div>
+    }
+
+    <h3>
+        @if (!string.IsNullOrWhiteSpace(searchTerm))
+        {
+            <span>Results for "@searchTerm"</span>
+        }
+        else
+        {
+            <span>All Products</span>
+        }
+    </h3>
+
+    @if (filteredProducts == null || !filteredProducts.Any())
+    {
+        <p><em>No products found...</em></p>
+    }
+    else
+    {
+        <div class="row">
+            @foreach (var product in filteredProducts.Take(currentProductCount))
+            {
+                <div class="col-md-3">
+                    <div class="card mb-4" @onclick="() => NavigateToProductDetails(product.Id)">
+                        <img src="@product.ImageUrl" class="card-img-top" alt="@product.Name" />
+                        <div class="card-body">
+                            <h5 class="card-title">@product.Name</h5>
+                            <p class="card-text">@product.Description</p>
+                            <p class="card-text"><strong>@product.Price.ToString("C")</strong></p>
+                            <button class="btn btn-primary btn-block" @onclick="() => NavigateToProductDetails(product.Id)">Buy Now</button>
+                        </div>
+                    </div>
+                </div> 
+            }
+        </div> 
+
+        <div class="text-center">
+            @if (currentProductCount < filteredProducts.Count)
+            {
+                <button class="btn btn-primary" @onclick="ShowMoreProducts">Show More</button>
+            }
+            @if (currentProductCount > 8)
+            {
+                <button class="btn btn-secondary" @onclick="ShowLessProducts">Show Less</button>
+            }
+        </div>
+    }
+</div> 
+@code {
+    private List<Product> products = new();
+    private List<Product> featuredProducts = new();
+    private List<Product> filteredProducts = new();
+    private string searchTerm = string.Empty;
+    private int featuredProductIndex = 0;
+    private int currentProductCount = 8;
+
+    private System.Threading.Timer? timer;
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await ClientService.GetAllProducts();
+
+        featuredProducts = products.OrderByDescending(p => p.Id).Take(8).ToList();
+
+        filteredProducts = products;
+
+        timer = new System.Threading.Timer(SwitchFeaturedProducts, null, 5000, 5000);
+    }
+
+    private void SwitchFeaturedProducts(object? state)
+    {
+        featuredProductIndex = (featuredProductIndex + 4) % 8;
+        InvokeAsync(StateHasChanged);
+    }
+
+    private void NavigateToProductDetails(int productId)
+    {
+        Navigation.NavigateTo($"/product/{productId}");
+    }
+
+    private void UpdateFilteredProducts(string term)
+    {
+        searchTerm = term; 
+
+        if (string.IsNullOrWhiteSpace(term))
+        {
+            filteredProducts = products; 
+        }
+        else
+        {
+            filteredProducts = products.Where(p =>
+                (!string.IsNullOrEmpty(p.Name) && p.Name.Contains(term, StringComparison.OrdinalIgnoreCase)) ||
+                (!string.IsNullOrEmpty(p.Brand) && p.Brand.Contains(term, StringComparison.OrdinalIgnoreCase)) ||
+                (!string.IsNullOrEmpty(p.Team) && p.Team.Contains(term, StringComparison.OrdinalIgnoreCase)) ||
+                (!string.IsNullOrEmpty(p.Player) && p.Player.Contains(term, StringComparison.OrdinalIgnoreCase))
+            ).ToList();
+        }
+
+        currentProductCount = 8;
+    }
+
+    private void HandleSearchSubmit()
+    {
+        UpdateFilteredProducts(searchTerm);
+    }
+
+    private void ShowMoreProducts()
+    {
+        currentProductCount = Math.Min(currentProductCount + 8, filteredProducts.Count);
+    }
+
+    private void ShowLessProducts()
+    {
+        currentProductCount = Math.Max(currentProductCount - 8, 8);
+    }
+
+    public void Dispose()
+    {
+        timer?.Dispose();
+    }
+}

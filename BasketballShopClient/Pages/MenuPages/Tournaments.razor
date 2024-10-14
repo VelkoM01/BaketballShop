@@ -1,0 +1,25 @@
+﻿@page "/tournaments"
+
+<h3>Basketball Smack Game</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card mb-4" @onclick="NavigateToGame">
+                <img src="img/basketballgame.png" class="card-img-top" alt="Basketball Smack Game" />
+                <div class="card-body">
+                    <h5 class="card-title">Basketball Game</h5>
+                    <p><strong>This is smack a basketball game, you need to smack it at least 10 times to get a suprise! Good luck!</strong></p>
+                    <button class="btn btn-primary">Play Game</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private void NavigateToGame()
+    {
+        Navigation.NavigateTo("/basketballgame");
+    }
+}

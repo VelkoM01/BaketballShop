@@ -1,0 +1,41 @@
+﻿@inherits LayoutComponentBase
+@inject LoadingService LoadingService
+
+<header>
+    <NavBarMenu />
+</header>
+
+<LoadingSpinner IsLoading="@IsLoading" />
+
+<main class="container-fluid mt-5">
+    <article class="content px-4">
+        @Body
+    </article>
+</main>
+
+<footer class="footer bg-light py-2">
+    <div class="container text-center">
+        <a href="/contact-support" class="footer-link">Contact & Support</a>
+        <span class="mx-2">|</span>
+        <a href="/about" class="footer-link">About</a>
+    </div>
+</footer>
+
+@code {
+    private bool IsLoading { get; set; }
+
+    protected override void OnInitialized()
+    {
+        LoadingService.OnShow += ShowLoading;
+        LoadingService.OnHide += HideLoading;
+    }
+
+    private void ShowLoading() => IsLoading = true;
+    private void HideLoading() => IsLoading = false;
+
+    public void Dispose()
+    {
+        LoadingService.OnShow -= ShowLoading;
+        LoadingService.OnHide -= HideLoading;
+    }
+}

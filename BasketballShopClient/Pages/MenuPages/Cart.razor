@@ -1,0 +1,114 @@
+﻿@page "/cart"
+
+<h3>Your Cart</h3>
+
+@if (!CartService.CartItems.Any())
+{
+    <p>Your cart is empty.</p>
+}
+else
+{
+    <ul class="list-group">
+        @foreach (var item in CartService.CartItems)
+        {
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <div class="d-flex align-items-center" @onclick="() => NavigateToProductDetails(item.Product.Id)">
+                    <img src="@item.Product.ImageUrl" alt="@item.Product.Name" width="50" height="50" class="me-3" />
+                    <div>
+                        <span>@item.Product.Name</span>
+                        <p class="mb-0">
+                            @if (item.Product.ProductType == ProductType.Jersey)
+                            {
+                                <span>Size: @item.Size</span>
+                            }
+                            @if (item.Product.ProductType == ProductType.Shoe)
+                            {
+                                <span>Shoe Size: @item.ShoeSize</span>
+                            }
+                        </p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center">
+                    <InputNumber @bind-Value="item.Quantity" min="1" max="@item.Product.StockQuantity" class="form-control me-2" />
+                    <span class="badge bg-primary rounded-pill">
+                        @string.Format("{0:C}", item.Product.Price * item.Quantity)
+                    </span>
+                    <i class="bi bi-trash text-danger ms-2" title="Remove" @onclick="() => RemoveFromCart(item)"></i>
+                </div>
+            </li>
+        }
+    </ul>
+    <p class="mt-3">Total Price: @string.Format("{0:C}", CartService.GetTotalPrice())</p>
+
+    <div class="mt-3">
+        @if (CartService.CartItems.Count() > 1)
+        {
+            <p class="card-text"><strong>The discount can only be used on one product!</strong></p>
+        }
+        <input type="text" @bind="discountCode" placeholder="Enter discount code" class="form-control" disabled="@(CartService.CartItems.Count() > 1)" />
+    </div>
+
+    <button class="btn btn-success mt-2" @onclick="Checkout">Checkout</button>
+}
+
+@code {
+    private string discountCode = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        CartService.OnCartChanged += StateHasChanged;
+    }
+
+    private void RemoveFromCart(CartItem item)
+    {
+        CartService.RemoveFromCart(item.Product);
+        StateHasChanged();
+    }
+
+    async Task Checkout()
+    {
+        var orderItems = CartService.CartItems;
+
+        var request = new CheckoutRequest
+        {
+            CartItems = orderItems.Select(cartItem => new Order
+            {
+                Id = cartItem.Product.Id,
+                Name = cartItem.Product.Name,
+                Price = cartItem.Product.Price,
+                Quantity = cartItem.Quantity,
+                Image = cartItem.Product.ImageUrl,
+            }).ToList(),
+            DiscountCode = discountCode
+        };
+
+        var response = await Http.PostAsJsonAsync("api/payment/checkout", request);
+
+        var result = await response.Content.ReadFromJsonAsync<CheckoutResponse>();
+        
+
+        await UpdateProductQuantitiesAsync(orderItems);
+
+        Navigation.NavigateTo(result?.Url);
+    }
+
+    private async Task UpdateProductQuantitiesAsync(List<CartItem> cartItems)
+    {
+        await ClientService.UpdateProductQuantitiesAsync(cartItems.Select(cartItem => new Order
+            {
+                Id = cartItem.Product.Id,
+                Quantity = cartItem.Quantity
+            }).ToList());
+    }
+
+
+    public void Dispose()
+    {
+        CartService.OnCartChanged -= StateHasChanged;
+    }
+
+    private void NavigateToProductDetails(int productId)
+    {
+        Navigation.NavigateTo($"/product/{productId}");
+    }
+}

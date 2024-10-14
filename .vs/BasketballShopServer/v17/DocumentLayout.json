@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AED30F3A-B4A5-4B7D-B41A-EF739805CFE1}|BasketballShopClient\\BasketballShopClient.csproj|c:\\users\\veljk\\source\\repos\\basketballshopserver\\basketballshopclient\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AED30F3A-B4A5-4B7D-B41A-EF739805CFE1}|BasketballShopClient\\BasketballShopClient.csproj|solutionrelative:basketballshopclient\\services\\cartservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AED30F3A-B4A5-4B7D-B41A-EF739805CFE1}|BasketballShopClient\\BasketballShopClient.csproj|c:\\users\\veljk\\source\\repos\\basketballshopserver\\basketballshopclient\\layout\\navbarmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AED30F3A-B4A5-4B7D-B41A-EF739805CFE1}|BasketballShopClient\\BasketballShopClient.csproj|solutionrelative:basketballshopclient\\layout\\navbarmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AED30F3A-B4A5-4B7D-B41A-EF739805CFE1}|BasketballShopClient\\BasketballShopClient.csproj|c:\\users\\veljk\\source\\repos\\basketballshopserver\\basketballshopclient\\pages\\menupages\\cart.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AED30F3A-B4A5-4B7D-B41A-EF739805CFE1}|BasketballShopClient\\BasketballShopClient.csproj|solutionrelative:basketballshopclient\\pages\\menupages\\cart.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CartService.cs",
+              "DocumentMoniker": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\Services\\CartService.cs",
+              "RelativeDocumentMoniker": "BasketballShopClient\\Services\\CartService.cs",
+              "ToolTip": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\Services\\CartService.cs",
+              "RelativeToolTip": "BasketballShopClient\\Services\\CartService.cs",
+              "ViewState": "AQIAADAAAAAAzMzMzMz8vwAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-27T08:31:40.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NavBarMenu.razor",
+              "DocumentMoniker": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\Layout\\NavBarMenu.razor",
+              "RelativeDocumentMoniker": "BasketballShopClient\\Layout\\NavBarMenu.razor",
+              "ToolTip": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\Layout\\NavBarMenu.razor",
+              "RelativeToolTip": "BasketballShopClient\\Layout\\NavBarMenu.razor",
+              "ViewState": "AQIAAA4AAAAAMzMzMzMbwBcAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-27T08:31:09.699Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cart.razor",
+              "DocumentMoniker": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\Pages\\MenuPages\\Cart.razor",
+              "RelativeDocumentMoniker": "BasketballShopClient\\Pages\\MenuPages\\Cart.razor",
+              "ToolTip": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\Pages\\MenuPages\\Cart.razor",
+              "RelativeToolTip": "BasketballShopClient\\Pages\\MenuPages\\Cart.razor",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAwvQAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-27T08:30:07.53Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

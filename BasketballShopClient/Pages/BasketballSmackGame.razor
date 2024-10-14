@@ -1,0 +1,128 @@
+﻿@page "/basketballgame"
+<h3>Basketball Smack Game</h3>
+
+<div class="game">
+    <div class="container-info">
+        <h2>Score: @score</h2>
+        <h2>Time remaining: @currentTime</h2>
+        <h2>@message</h2>        
+    </div>
+    <div class="endinfo">
+    @if (!string.IsNullOrEmpty(discountCode))
+    {
+        <h2>Congratulations! Your discount code is: @discountCode</h2>
+    }
+    </div>
+    @if (!isGameRunning)
+    {
+        <button class="btn btn-success" @onclick="StartGame">Start Game</button>
+    }
+
+    <div class="board">
+        @foreach (var s in Squares)
+        {
+            <Square SquareModel="s" OnMouseUp="() => MouseUp(s)" />
+        }
+    </div>
+</div>
+
+@code {
+    PeriodicTimer gameLoopTimer;
+    PeriodicTimer gameTimeTimer;
+
+    private void MouseUp(SquareModel s)
+    {
+        if (isGameRunning)
+        {
+            if (s.Id == hitPosition)
+            {
+                score += 1;
+            }
+        }
+    }
+
+    private Random random = new Random();
+    int? lastPosition = null;
+
+    private void SetNextAppeareance()
+    {
+        foreach (var item in Squares)
+        {
+            item.IsShown = false;
+        }
+
+        int randomPosition;
+        do
+        {
+            randomPosition = random.Next(0, 9);
+        } while (lastPosition == randomPosition);
+
+        Squares[randomPosition].IsShown = true;
+
+        hitPosition = randomPosition;
+        lastPosition = randomPosition;
+
+        StateHasChanged();
+    }
+
+    private async Task GameLoopAsync(PeriodicTimer timer)
+    {
+        while (isGameRunning)
+        {
+            SetNextAppeareance();
+            await timer.WaitForNextTickAsync();
+        }
+    }
+
+    private async Task GameTimeAsync(PeriodicTimer timer)
+    {
+        while (isGameRunning)
+        {
+            currentTime--;
+            if (currentTime == 0)
+            {
+                message = "Game ended!";
+                isGameRunning = false;
+
+                if (score >= 10)
+                {
+                    discountCode = GetRandomDiscountCode();
+                }
+            }
+            StateHasChanged();
+            await timer.WaitForNextTickAsync();
+        }
+    }
+
+    private void StartGame()
+    {
+        score = 0;
+        currentTime = 30;
+        message = string.Empty;
+        isGameRunning = true;
+        discountCode = null;
+
+        gameLoopTimer = new PeriodicTimer(TimeSpan.FromMilliseconds(gameSpeed));
+        _ = GameLoopAsync(gameLoopTimer);
+
+        gameTimeTimer = new PeriodicTimer(TimeSpan.FromSeconds(1));
+        _ = GameTimeAsync(gameTimeTimer);
+    }
+
+    private string GetRandomDiscountCode()
+    {
+        var discountCodes = new List<string>
+        {
+            "DISCOUNT5",
+            "DISCOUNT10",
+            "DISCOUNT15",
+            "DISCOUNT20",
+            "DISCOUNT25"
+        };
+
+        int index = random.Next(discountCodes.Count);
+        return discountCodes[index];
+    }
+
+    private string? discountCode;
+}

@@ -1,0 +1,381 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\obj\\Debug\\net8.0\\compressed\\nr4kuca6nf.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\obj\\Debug\\net8.0\\scopedcss\\bundle\\BasketballShopClient.styles.css",
+      "PackagePath": "staticwebassets\\BasketballShopClient.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\all.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\all.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\brands.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\brands.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\brands.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\brands.min.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\fontawesome.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\fontawesome.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\fontawesome.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\fontawesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\regular.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\regular.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\regular.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\regular.min.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\solid.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\solid.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\solid.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\solid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\svg-with-js.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\svg-with-js.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\svg-with-js.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\svg-with-js.min.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\v4-font-face.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v4-font-face.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\v4-font-face.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v4-font-face.min.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\v4-shims.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v4-shims.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\v4-shims.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v4-shims.min.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\v5-font-face.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v5-font-face.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\css\\v5-font-face.min.css",
+      "PackagePath": "staticwebassets\\font-awesome\\css\\v5-font-face.min.css"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\all.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\all.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\all.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\brands.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\brands.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\brands.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\brands.min.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\conflict-detection.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\conflict-detection.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\conflict-detection.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\conflict-detection.min.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\fontawesome.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\fontawesome.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\fontawesome.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\fontawesome.min.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\regular.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\regular.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\regular.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\regular.min.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\solid.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\solid.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\solid.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\solid.min.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\v4-shims.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\v4-shims.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\js\\v4-shims.min.js",
+      "PackagePath": "staticwebassets\\font-awesome\\js\\v4-shims.min.js"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\sprites\\brands.svg",
+      "PackagePath": "staticwebassets\\font-awesome\\sprites\\brands.svg"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\sprites\\regular.svg",
+      "PackagePath": "staticwebassets\\font-awesome\\sprites\\regular.svg"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\sprites\\solid.svg",
+      "PackagePath": "staticwebassets\\font-awesome\\sprites\\solid.svg"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.ttf",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-v4compatibility.ttf"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\font-awesome\\webfonts\\fa-v4compatibility.woff2",
+      "PackagePath": "staticwebassets\\font-awesome\\webfonts\\fa-v4compatibility.woff2"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\DAL+MNK+DF+SWGMN+JSY+ASC+22.png",
+      "PackagePath": "staticwebassets\\img\\DAL+MNK+DF+SWGMN+JSY+ASC+22.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\DEN+MNK+DF+SWGMN+JSY+ASC+22.png",
+      "PackagePath": "staticwebassets\\img\\DEN+MNK+DF+SWGMN+JSY+ASC+22.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\GIANNIS+IMMORTALITY+4.png",
+      "PackagePath": "staticwebassets\\img\\GIANNIS+IMMORTALITY+4.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\GSW+MNK+DF+SWGMN+JSY+ICN+22.png",
+      "PackagePath": "staticwebassets\\img\\GSW+MNK+DF+SWGMN+JSY+ICN+22.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\JORDAN+JUMPMAN+WRISTBANDS.png",
+      "PackagePath": "staticwebassets\\img\\JORDAN+JUMPMAN+WRISTBANDS.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\JORDAN+LEGACY+2.0+8P.png",
+      "PackagePath": "staticwebassets\\img\\JORDAN+LEGACY+2.0+8P.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\JORDAN+LUKA+2.png",
+      "PackagePath": "staticwebassets\\img\\JORDAN+LUKA+2.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\JORDAN+LUKA+3.png",
+      "PackagePath": "staticwebassets\\img\\JORDAN+LUKA+3.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\JORDAN+Y+SHOOTER+SLEEVES.png",
+      "PackagePath": "staticwebassets\\img\\JORDAN+Y+SHOOTER+SLEEVES.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\KD16.png",
+      "PackagePath": "staticwebassets\\img\\KD16.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\KD17+NRG.png",
+      "PackagePath": "staticwebassets\\img\\KD17+NRG.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\KD17.png",
+      "PackagePath": "staticwebassets\\img\\KD17.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\LAL+MNK+DF+SWGMN+JSY+ICN+22.png",
+      "PackagePath": "staticwebassets\\img\\LAL+MNK+DF+SWGMN+JSY+ICN+22.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\LAL+MNK+DF+SWGMN+JSY+STM+22.png",
+      "PackagePath": "staticwebassets\\img\\LAL+MNK+DF+SWGMN+JSY+STM+22.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\LEBRON+WITNESS+VIII.png",
+      "PackagePath": "staticwebassets\\img\\LEBRON+WITNESS+VIII.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\LEBRON+XXI.png",
+      "PackagePath": "staticwebassets\\img\\LEBRON+XXI.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\LEBRON+XXIdark.png",
+      "PackagePath": "staticwebassets\\img\\LEBRON+XXIdark.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\MIA+MNK+DF+SWGMN+JSY+STM+22.png",
+      "PackagePath": "staticwebassets\\img\\MIA+MNK+DF+SWGMN+JSY+STM+22.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\MIL+MNK+DFADV+ATH+JSY+ICN+20.png",
+      "PackagePath": "staticwebassets\\img\\MIL+MNK+DFADV+ATH+JSY+ICN+20.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\NIKE+BASKETBALL+8P+PRM+ENERGY.png",
+      "PackagePath": "staticwebassets\\img\\NIKE+BASKETBALL+8P+PRM+ENERGY.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\NIKE+FUEL+JUG+64+OZ+CHUG.png",
+      "PackagePath": "staticwebassets\\img\\NIKE+FUEL+JUG+64+OZ+CHUG.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\NIKE+PRO+KNITTED+ANKLE+SLEEVE.png",
+      "PackagePath": "staticwebassets\\img\\NIKE+PRO+KNITTED+ANKLE+SLEEVE.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\NIKE+SWOOSH+HEADBAND.png",
+      "PackagePath": "staticwebassets\\img\\NIKE+SWOOSH+HEADBAND.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\NYK+MNK+DF+SWGMN+JSY+ICN+22.png",
+      "PackagePath": "staticwebassets\\img\\NYK+MNK+DF+SWGMN+JSY+ICN+22.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\PHX+MNK+DF+SWGMN+JSY+ICN+23.png",
+      "PackagePath": "staticwebassets\\img\\PHX+MNK+DF+SWGMN+JSY+ICN+23.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\SABRINA+2.png",
+      "PackagePath": "staticwebassets\\img\\SABRINA+2.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\SAS+MNK+DF+SWGMN+JSY+CE+23.png",
+      "PackagePath": "staticwebassets\\img\\SAS+MNK+DF+SWGMN+JSY+CE+23.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\SEL+MNK+DF+JSY+CURRY.png",
+      "PackagePath": "staticwebassets\\img\\SEL+MNK+DF+JSY+CURRY.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\SEL+MNK+DF+JSY+MORANT.png",
+      "PackagePath": "staticwebassets\\img\\SEL+MNK+DF+JSY+MORANT.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\U+J+ESSENTIAL+CREW+3PR+-++144.png",
+      "PackagePath": "staticwebassets\\img\\U+J+ESSENTIAL+CREW+3PR+-++144.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\WNBA+U+NK+ELITE+CREW.png",
+      "PackagePath": "staticwebassets\\img\\WNBA+U+NK+ELITE+CREW.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\ZM+LEBRON+NXXT+GEN+AMPD.png",
+      "PackagePath": "staticwebassets\\img\\ZM+LEBRON+NXXT+GEN+AMPD.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\ZOOM+FREAK+5.png",
+      "PackagePath": "staticwebassets\\img\\ZOOM+FREAK+5.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\basketballgame.png",
+      "PackagePath": "staticwebassets\\img\\basketballgame.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\jordan_black_socks.png",
+      "PackagePath": "staticwebassets\\img\\jordan_black_socks.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\nike_ball_8Pa.png",
+      "PackagePath": "staticwebassets\\img\\nike_ball_8Pa.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\img\\nike_ball_8Pb.png",
+      "PackagePath": "staticwebassets\\img\\nike_ball_8Pb.png"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\veljk\\source\\repos\\BasketballShopServer\\BasketballShopClient\\wwwroot\\shoplogo.png",
+      "PackagePath": "staticwebassets\\shoplogo.png"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BasketballShopClient.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BasketballShopClient.props",
+      "PackagePath": "build\\BasketballShopClient.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BasketballShopClient.props",
+      "PackagePath": "buildMultiTargeting\\BasketballShopClient.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BasketballShopClient.props",
+      "PackagePath": "buildTransitive\\BasketballShopClient.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
